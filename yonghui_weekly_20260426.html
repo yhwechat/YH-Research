@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>永惠研究 | 芯片股的超级行情 | 2026年4月26日</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+    font-weight: 400;
+    background: #f7f5f0;
+    color: #1a1a1a;
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  /* Header */
+  .header {
+    background: #1a2e1a;
+    padding: 40px 32px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; left: 60px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .byline-en {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .byline-zh {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+  .header-divider {
+    width: 32px;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+  }
+  .header-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .header-date {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+  }
+
+  /* Content */
+  .content {
+    padding: 0 32px;
+  }
+
+  /* Teaser */
+  .teaser {
+    padding: 32px 0 24px;
+    border-bottom: 1px solid #e8e4dc;
+  }
+  .teaser p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #2a2a2a;
+  }
+  .teaser p strong {
+    color: #1a2e1a;
+  }
+
+  /* Section */
+  .section {
+    padding: 28px 0 8px;
+    border-bottom: 1px solid #e8e4dc;
+  }
+  .section:last-of-type { border-bottom: none; }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .section-num {
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    background: #1a2e1a;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0;
+  }
+  .section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a2e1a;
+    line-height: 1.4;
+  }
+
+  p { margin-bottom: 14px; font-size: 15px; color: #2a2a2a; line-height: 1.85; }
+  p:last-child { margin-bottom: 0; }
+
+  /* Data table */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 16px 0 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd8ce;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: #fff;
+  }
+  thead tr {
+    background: #1a2e1a;
+  }
+  thead th {
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+  thead th:not(:first-child) { text-align: right; }
+  tbody tr { border-bottom: 1px solid #ede9e0; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #faf8f4; }
+  tbody td {
+    padding: 9px 12px;
+    color: #2a2a2a;
+    white-space: nowrap;
+  }
+  tbody td:not(:first-child) { text-align: right; }
+  .tag-up { color: #1a6e3a; font-weight: 500; }
+  .tag-warn { color: #b85c00; font-weight: 500; }
+  .table-note {
+    font-size: 11px;
+    color: #888;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    padding-left: 2px;
+  }
+
+  /* Risk cards */
+  .risk-grid { margin: 16px 0 20px; display: flex; flex-direction: column; gap: 10px; }
+  .risk-card {
+    border-left: 3px solid #c8a84b;
+    background: #faf8f2;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+  }
+  .risk-card-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1a2e1a;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .risk-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background: #f0e6c8;
+    color: #7a5200;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+  }
+  .risk-card p { font-size: 13.5px; color: #444; margin: 0; line-height: 1.7; }
+
+  /* Strategy cards */
+  .strategy-grid { margin: 16px 0 20px; display: flex; flex-direction: column; gap: 10px; }
+  .strategy-card {
+    border-left: 3px solid #1a2e1a;
+    background: #f4f7f4;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+  }
+  .strategy-card-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1a2e1a;
+    margin-bottom: 5px;
+  }
+  .strategy-card p { font-size: 13.5px; color: #444; margin: 0; line-height: 1.7; }
+
+  /* Closing */
+  .closing {
+    background: #1a2e1a;
+    margin: 0 -32px;
+    padding: 28px 32px;
+  }
+  .closing p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.9;
+    margin: 0;
+  }
+  .closing-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  /* Disclaimer */
+  .disclaimer {
+    padding: 24px 32px 32px;
+    background: #f7f5f0;
+    margin: 0 -32px -32px;
+  }
+  .disclaimer-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .disclaimer p {
+    font-size: 11.5px;
+    color: #888;
+    line-height: 1.75;
+    margin-bottom: 8px;
+  }
+  .disclaimer p:last-child { margin-bottom: 0; }
+
+  /* Implication box */
+  .implication {
+    background: #f0f4f0;
+    border: 1px solid #c8d8c8;
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin: 16px 0 20px;
+  }
+  .implication p { font-size: 14.5px; color: #1a2e1a; margin-bottom: 10px; line-height: 1.8; }
+  .implication p:last-child { margin-bottom: 0; }
+
+  /* Chart container */
+  .chart-container {
+    margin: 16px 0 8px;
+    position: relative;
+    width: 100%;
+    height: 220px;
+  }
+  .chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 11.5px;
+    color: #666;
+    margin-bottom: 16px;
+    margin-top: 6px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 480px) {
+    .content { padding: 0 20px; }
+    .header { padding: 32px 20px 24px; }
+    .closing { margin: 0 -20px; padding: 24px 20px; }
+    .disclaimer { padding: 20px 20px 28px; margin: 0 -20px -20px; }
+    .header-title { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="byline-en">Yong Hui Research · Weekly Market Insights</div>
+    <div class="byline-zh">永惠研究</div>
+    <div class="header-divider"></div>
+    <div class="header-title">芯片股的超级行情：<br>真实信号，还是市场狂热？</div>
+    <div class="header-date">2026年4月26日 · 每周市场洞察</div>
+  </div>
+
+  <div class="content">
+
+    <!-- Teaser -->
+    <div class="teaser">
+      <p>本周，美国半导体板块上演了一幕32年未见的行情：费城半导体指数（SOX）连涨<strong>18个交易日</strong>，刷新该指数自1994年成立以来的历史纪录；英特尔单日暴涨逾24%，创下股价历史最高点；纳斯达克指数同步刷新历史高位。壮观行情令人振奋，但作为长期投资者，我们必须冷静地问：市场是在正确定价一场结构性革命，还是情绪已经跑在了现实的前面？</p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">一</div>
+        <div class="section-title">本周发生了什么？</div>
+      </div>
+
+      <p>本轮行情的直接催化剂，来自英特尔第一季度财报的强力超预期。</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>英特尔 Q1 2026 关键财务数据</th>
+              <th>实际值</th>
+              <th>同比增长</th>
+              <th>市场预期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>总营收</td>
+              <td>$136亿</td>
+              <td class="tag-up">+7%</td>
+              <td>$124亿</td>
+            </tr>
+            <tr>
+              <td>数据中心及AI业务收入</td>
+              <td>$51亿</td>
+              <td class="tag-up">+22%</td>
+              <td>$44亿</td>
+            </tr>
+            <tr>
+              <td>晶圆代工业务收入</td>
+              <td>$54亿</td>
+              <td class="tag-up">+16%</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>调整后每股收益（EPS）</td>
+              <td>$0.29</td>
+              <td class="tag-up">大幅超预期</td>
+              <td>$0.01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-note">数据来源：英特尔公司 SEC 8-K 文件，2026年4月23日</div>
+
+      <p>英特尔亮眼业绩引发了整个芯片板块的集体共鸣。德州仪器在本周早些时候同样发布了超预期的AI相关业绩指引，两组数据相互印证，向市场传递出一个共同信号：AI芯片需求是真实的、广泛的。</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>主要芯片股本周表现（4月24日）</th>
+              <th>当日涨幅</th>
+              <th>2026年至今涨幅</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>英特尔（INTC）</td>
+              <td class="tag-up">+24.89%</td>
+              <td class="tag-up">+106%（含本日）</td>
+            </tr>
+            <tr>
+              <td>ARM Holdings（ARM）</td>
+              <td class="tag-up">+14.68%</td>
+              <td class="tag-up">+114%（至约$234）</td>
+            </tr>
+            <tr>
+              <td>超微半导体（AMD）</td>
+              <td class="tag-up">+13.85%</td>
+              <td class="tag-up">+60%（至约$348）</td>
+            </tr>
+            <tr>
+              <td>台积电（TSM）、ASML、SMCI</td>
+              <td class="tag-up">+3.5%以上</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>费城半导体指数（SOX）</td>
+              <td class="tag-up">+4.3%</td>
+              <td class="tag-up">4月单月涨幅约+40%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-note">数据来源：Motley Fool、24/7 Wall St.、Benzinga，2026年4月24日收盘数据</div>
+
+      <div class="chart-container">
+        <canvas id="perfChart" role="img" aria-label="主要芯片股4月24日当日涨幅对比柱状图">英特尔+24.89%，ARM+14.68%，AMD+13.85%，SOX+4.3%</canvas>
+      </div>
+      <div class="chart-legend">
+        <span class="legend-item"><span class="legend-dot" style="background:#1a5c2e;"></span>当日涨幅（4月24日）</span>
+      </div>
+      <div class="table-note">图：主要芯片股4月24日单日涨幅（%）</div>
+
+      <p>SOX指数连续18个交易日上涨，超越此前2014年创下的15连涨纪录，为该指数32年历史上的最长连涨纪录。4月单月涨幅约达40%，为2000年2月互联网泡沫高峰以来最强劲的单月表现。</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">二</div>
+        <div class="section-title">风险警示：强势行情背后不可忽视的隐患</div>
+      </div>
+
+      <p>盈利数据固然亮眼，但历史告诉我们，最危险的时刻，往往是所有人都相信"这次不一样"的时候。以下六项风险因素，值得每一位理性投资者认真审视。</p>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-card-title">估值已定价完美 <span class="risk-badge">高度关注</span></div>
+          <p>经过18个交易日的连涨，众多芯片股估值已反映极为乐观的预期。目前标普500指数12个月远期市盈率为20.9倍，高于5年均值19.9倍及10年均值18.9倍；半导体板块溢价更为突出。历史数据显示，半导体股票在一个周期内从峰值到谷底的跌幅，往往达到40%至60%。</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-card-title">需求高度集中于少数买家 <span class="risk-badge">结构性风险</span></div>
+          <p>当前AI芯片需求增长，高度依赖微软、谷歌、亚马逊、Meta等少数超大型科技公司的资本开支扩张。自2025年10月以来，这些公司对2026至2030年的资本开支预测已上调逾25%。一旦任何一家因回报率不达预期或宏观压力而收缩开支，对芯片厂商的冲击将迅速而显著。</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-card-title">地缘政治与出口管制 <span class="risk-badge">政策不确定性</span></div>
+          <p>美国对华半导体出口限制仍是行业头顶悬着的一把剑。台积电、ASML等在亚洲市场拥有重要营收敞口的企业，面临持续的政策不确定性，这种不确定性难以被精确量化，却可能在任何时刻成为市场重新定价的导火索。</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-card-title">需求前置与周期性回落 <span class="risk-badge">历史先例</span></div>
+          <p>当前数据中心建设的爆发性增长，有可能正在将未来数年的需求压缩至一个短暂的时间窗口内。一旦建设高峰期过去，订单的正常化可能来得突然。2018年内存芯片超级周期、2022年加密挖矿芯片热潮，均以类似方式收场。</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-card-title">超大型科技公司自研芯片 <span class="risk-badge">中期结构性威胁</span></div>
+          <p>谷歌（TPU）、亚马逊（Trainium）、微软（Maia）等平台正在加速自研芯片，逐步减少对外部供应商的依赖。这是一个方向清晰的结构性趋势，对主流芯片厂商的长期定价权构成潜在挑战。</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-card-title">价格动能≠业务质量 <span class="risk-badge">选股陷阱</span></div>
+          <p>本轮芯片股全面上涨，并非所有标的都具备同等坚实的基本面支撑。部分个股上涨更多源于板块联动情绪，而非自身经营成果的实质改善。在情绪主导的市场中，优秀企业与平庸企业往往被一视同仁，但最终市场会将二者区分开来。</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>估值参考</th>
+              <th>当前水平</th>
+              <th>5年均值</th>
+              <th>10年均值</th>
+              <th>信号</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>标普500远期市盈率</td>
+              <td>20.9倍</td>
+              <td>19.9倍</td>
+              <td>18.9倍</td>
+              <td class="tag-warn">高于均值</td>
+            </tr>
+            <tr>
+              <td>标普500 Q1盈利增长</td>
+              <td>+12%+</td>
+              <td>—</td>
+              <td>—</td>
+              <td class="tag-up">连续第六季度双位数增长</td>
+            </tr>
+            <tr>
+              <td>SOX指数4月涨幅</td>
+              <td>约+40%</td>
+              <td>—</td>
+              <td>—</td>
+              <td class="tag-warn">2000年以来最大单月涨幅</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-note">数据来源：FactSet（截至2026年4月24日），Benzinga</div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">三</div>
+        <div class="section-title">永惠视角：如何应对，而非回避</div>
+      </div>
+
+      <p>面对上述风险，我们的答案不是退出这个领域，而是以更高的纪律性在其中导航。</p>
+
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-card-title">区分护城河的深浅</div>
+          <p>关注具有结构性、难以复制竞争优势的企业——领先的制程技术、专有知识产权或生态系统锁定效应——而非仅仅因"AI概念"被追捧的标的。</p>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-title">估值纪律是第一道防线</div>
+          <p>芒格的原则值得铭记：以合理的价格买入一家优秀的公司，远胜于以优秀的价格买入一家合理的公司。在当前估值水平下，安全边际比任何时候都更重要。我们不追逐处于峰值倍数的资产，而是耐心等待更合理的买入时机。</p>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-title">仓位管理反映不确定性</div>
+          <p>即便对某一业务有高度信心，也以仓位大小来体现时机判断上的不确定性。在高估值标的上重仓集中，会将上行与下行同步放大。</p>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-title">密切追踪超大型科技公司资本开支动态</div>
+          <p>微软、谷歌、亚马逊每季度的资本开支指引，是AI芯片需求的领先指标。一旦这些数字出现明显下修，将是芯片需求周期可能见顶的重要预警信号。</p>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-title">视野延伸至热门标的之外</div>
+          <p>风险调整后回报最具吸引力的机会，有时不在于最受追捧的明星芯片股，而在于服务AI基础设施建设的周边优质企业——工业自动化、电力半导体、特种材料等细分领域，估值相对合理，竞争格局更为稳定。</p>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-title">耐心本身就是风险管理</div>
+          <p>在动能主导的市场中，坚守等待更好买入时机的纪律，本身就是一种主动的风险控制。错过最后20%的涨幅，代价远小于参与随后50%的跌幅。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-num">四</div>
+        <div class="section-title">投资启示</div>
+      </div>
+
+      <div class="implication">
+        <p>AI对半导体行业的结构性驱动是真实的，本周的盈利数据提供了新的有力确认。但这个信号已被市场广泛理解，并被积极地定价于当前股价之中。</p>
+        <p>在周期的这个阶段，风险管理的核心不是回避整个板块，而是保持选择性、估值意识，以及对资本开支周期的持续关注。</p>
+        <p>长期坚守"以合理价格买入优质企业"原则的投资者，最终将跑赢那些追逐短期动能的参与者——即便后者在当下看起来更为"正确"。</p>
+      </div>
+    </div>
+
+    <!-- Closing -->
+    <div class="closing">
+      <div class="closing-label">结语</div>
+      <p>18个交易日的连涨，英特尔史上最强单日涨幅——这样的行情值得尊重，也值得审视。AI的变革浪潮是真实的，其投资价值是长期的。但在投资的世界里，判断对趋势只是成功的一半；另一半，是你为此支付的价格。在永惠，我们寻求以合理的价格拥有未来，而非不惜代价地追逐未来。</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <div class="disclaimer-label">免责声明</div>
+      <p>本评论由永惠基金公司的研究团队永惠研究发布，仅供参考和学习之用，不构成投资建议、招揽，或任何证券的买卖要约。过往表现不代表未来业绩。投资者在作出任何投资决策前，应进行独立尽职调查，并咨询合格的财务顾问。永惠基金公司是依据新加坡《可变资本公司法》注册成立并受监管的可变资本公司。</p>
+      <p>This commentary is published by 永惠研究, the research team of Yong Hui Fund VCC, for informational and educational purposes only. It does not constitute investment advice, a solicitation, or an offer to buy or sell any security. Past performance is not indicative of future results. Investors should conduct their own due diligence and consult a qualified financial adviser before making any investment decisions. Yong Hui Fund VCC is a Variable Capital Company incorporated in Singapore and regulated under the VCC Act.</p>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+  new Chart(document.getElementById('perfChart'), {
+    type: 'bar',
+    data: {
+      labels: ['英特尔\n(INTC)', 'ARM\nHoldings', '超微半导体\n(AMD)', 'SOX指数'],
+      datasets: [{
+        label: '当日涨幅 (%)',
+        data: [24.89, 14.68, 13.85, 4.3],
+        backgroundColor: ['#1a5c2e', '#2d7a46', '#3d9458', '#6ab87c'],
+        borderWidth: 0,
+        borderRadius: 3
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => '+' + ctx.parsed.y.toFixed(2) + '%'
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: { size: 11 }, color: '#555', maxRotation: 0 }
+        },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.06)' },
+          ticks: {
+            font: { size: 11 },
+            color: '#555',
+            callback: (v) => '+' + v + '%'
+          },
+          min: 0, max: 30
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
